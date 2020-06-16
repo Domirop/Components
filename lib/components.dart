@@ -71,7 +71,7 @@ class Components {
     return calendar(press, currentDate2: currentDate2);
   }
 
-  static GoBack goBack(BuildContext screen, String text, double height, double width){
+  static GoBack goBack(BuildContext screen, String text){
     return GoBack(screen, text);
   }
 
