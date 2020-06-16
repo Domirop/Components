@@ -7,7 +7,7 @@ class Calendar extends StatefulWidget {
   Function press;
   DateTime currentDate2;
   DateTime currentDate = DateTime.now();
-  Calendar(this.press, this.currentDate2);
+  Calendar(this.press, {this.currentDate2});
 
   @override
   _CalendarState createState() => _CalendarState();

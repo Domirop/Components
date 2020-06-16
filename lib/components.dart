@@ -67,8 +67,8 @@ class Components {
     return NetworkError(height, width, largeText, mediumText1, mediumText2);
   }
 
-  static Widget calendar(Function press, DateTime currentDate2){
-    return calendar(press, currentDate2);
+  static Widget calendar(Function press, {DateTime currentDate2}){
+    return calendar(press, currentDate2: currentDate2);
   }
 
   static GoBack goBack(BuildContext screen, String text, double height, double width){
