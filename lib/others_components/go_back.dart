@@ -11,7 +11,7 @@ class GoBack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: width * 0.025, top: height * 0.027),
+      padding: EdgeInsets.only(left: width * 0.025, top: height * 0.013),
       child: GestureDetector(
         onTap: () {
           Navigator.pop(screen);
