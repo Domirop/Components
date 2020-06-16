@@ -72,7 +72,7 @@ class Components {
   }
 
   static GoBack goBack(BuildContext screen, String text, double height, double width){
-    return GoBack(screen, text, height, width);
+    return GoBack(screen, text);
   }
 
   static Widget confirmDialog(Widget widget, Function function, {bool multiOptions = true}){
