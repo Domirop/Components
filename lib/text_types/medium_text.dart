@@ -5,7 +5,7 @@ class MediumText extends StatelessWidget {
   Color color;
   FontWeight boolText;
   double size;
-  MediumText(String text, FontWeight boolText, double size, Color color);
+  MediumText(this.text, this.boolText, this.size, this.color);
 
   @override
   Widget build(BuildContext context) {

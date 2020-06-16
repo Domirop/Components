@@ -5,7 +5,7 @@ class LargeText extends StatelessWidget {
   Color color;
   FontWeight boolText;
   double size;
-  LargeText(String text, FontWeight boolText, double size, Color color);
+  LargeText(this.text, this.boolText, this.size, this.color);
 
   @override
   Widget build(BuildContext context) {
