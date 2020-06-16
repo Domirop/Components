@@ -5,10 +5,12 @@ class TextError extends StatelessWidget {
   Color color;
   double height;
   double widht;
-  TextError(this.error, this.color, this.height, this.widht);
+  TextError(this.error, this.color);
 
   @override
   Widget build(BuildContext context) {
+    height = MediaQuery.of(context).size.height;
+    widht = MediaQuery.of(context).size.width;
     return Container(
       padding: EdgeInsets.fromLTRB(widht * 0.101, 0.0, widht * 0.089, height * 0.027),
       child: Align(

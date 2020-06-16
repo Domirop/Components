@@ -1,4 +1,5 @@
 library components;
+
 import 'package:components/buttons/button.dart';
 import 'package:components/errors_elements/network_error.dart';
 import 'package:components/errors_elements/text_error.dart';
@@ -43,10 +44,12 @@ class Components {
     return LargeText(text, boolText, size, color);
   }
 
-  static TextError errorText(String text, double height, double widht,
-      {Color color}) {
+  static TextError errorText(String text, {Color color}) {
     color == null ? color = Color.fromRGBO(230, 73, 90, 1) : color = color;
-    return TextError(text, color, height, widht);
+    return TextError(
+      text,
+      color,
+    );
   }
 
   static TextFieldPredefine textFieldPredefine(TextEditingController controller,
@@ -61,21 +64,25 @@ class Components {
   }
 
   static NetworkError networkError(double height, double width) {
-    LargeText largeText = Components.largeText("¡Vaya! Parece que no tienes internet");
-    MediumText mediumText1 = Components.mediumText("No podemos obtener los datos");
-    MediumText mediumText2 = Components.mediumText("Por favor revisa tu conexión a internet");
+    LargeText largeText =
+        Components.largeText("¡Vaya! Parece que no tienes internet");
+    MediumText mediumText1 =
+        Components.mediumText("No podemos obtener los datos");
+    MediumText mediumText2 =
+        Components.mediumText("Por favor revisa tu conexión a internet");
     return NetworkError(height, width, largeText, mediumText1, mediumText2);
   }
 
-  static Widget calendar(Function press, {DateTime currentDate2}){
+  static Widget calendar(Function press, {DateTime currentDate2}) {
     return calendar(press, currentDate2: currentDate2);
   }
 
-  static GoBack goBack(BuildContext screen, String text){
+  static GoBack goBack(BuildContext screen, String text) {
     return GoBack(screen, text);
   }
 
-  static Widget confirmDialog(Widget widget, Function function, {bool multiOptions = true}){
+  static Widget confirmDialog(Widget widget, Function function,
+      {bool multiOptions = true}) {
     return ConfirmDialog(widget, function, multiOptions);
   }
 }
