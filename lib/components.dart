@@ -13,6 +13,7 @@ import 'package:components/text_types/textfield_predefine.dart';
 import 'package:flutter/material.dart';
 
 class Components {
+
   static MyButton smallButton(Function function, Widget widget,
       {double height,
       double horizontalPadding = 35.0,
@@ -71,10 +72,6 @@ class Components {
     MediumText mediumText2 =
         Components.mediumText("Por favor revisa tu conexión a internet");
     return NetworkError(height, width, largeText, mediumText1, mediumText2);
-  }
-
-  static Widget calendar(Function press, {DateTime currentDate2}) {
-    return calendar(press, currentDate2: currentDate2);
   }
 
   static GoBack goBack(BuildContext screen, String text) {
