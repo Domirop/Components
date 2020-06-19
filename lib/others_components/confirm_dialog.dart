@@ -42,14 +42,14 @@ class _ConfirmDialogState extends State<ConfirmDialog> {
         Components.smallButton(
           () => {Navigator.pop(context)},
           Components.smallText("No"),
-          horizontalPadding: 5,
+          horizontalPadding: 20,
           color: Color.fromRGBO(230, 73, 90, 1),
           height: height * 0.04,
         ),
         Components.smallButton(
           widget.function,
           Components.smallText("Sí"),
-          horizontalPadding: 5,
+          horizontalPadding: 20,
           color: Color.fromRGBO(230, 73, 90, 1),
           height: height * 0.04,
         ),
