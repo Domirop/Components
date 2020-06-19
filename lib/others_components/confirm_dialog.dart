@@ -38,6 +38,7 @@ class _ConfirmDialogState extends State<ConfirmDialog> {
 
   Widget buttonsOptions() {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Components.smallButton(
           () => {Navigator.pop(context)},
