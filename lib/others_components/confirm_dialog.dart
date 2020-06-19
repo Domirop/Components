@@ -1,4 +1,5 @@
 import 'package:components/components.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ConfirmDialog extends StatefulWidget {
@@ -38,6 +39,8 @@ class _ConfirmDialogState extends State<ConfirmDialog> {
 
   Widget buttonsOptions() {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Components.smallButton(
           () => {Navigator.pop(context)},
