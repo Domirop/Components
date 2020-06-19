@@ -40,19 +40,25 @@ class _ConfirmDialogState extends State<ConfirmDialog> {
   Widget buttonsOptions() {
     return Row(
       children: <Widget>[
-        Components.smallButton(
-          () => {Navigator.pop(context)},
-          Components.smallText("No"),
-          horizontalPadding: 35,
+        FlatButton(
+          onPressed: () => Navigator.pop(context),
           color: Color.fromRGBO(230, 73, 90, 1),
-          height: height * 0.04,
+          child: Text(
+            "No",
+            style: TextStyle(
+              color: Colors.white
+            ),
+          ),
         ),
-        Components.smallButton(
-          widget.function,
-          Components.smallText("Sí"),
-          horizontalPadding: 35,
+        FlatButton(
+          onPressed: widget.function,
           color: Color.fromRGBO(230, 73, 90, 1),
-          height: height * 0.04,
+          child: Text(
+            "Sí",
+            style: TextStyle(
+                color: Colors.white
+            ),
+          ),
         ),
       ],
     );
