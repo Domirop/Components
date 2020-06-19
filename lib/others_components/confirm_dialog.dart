@@ -44,6 +44,10 @@ class _ConfirmDialogState extends State<ConfirmDialog> {
         FlatButton(
           onPressed: () => Navigator.pop(context),
           color: Color.fromRGBO(230, 73, 90, 1),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            side: BorderSide(width: 1.0),
+          ),
           child: Text(
             "No",
             style: TextStyle(
@@ -54,6 +58,10 @@ class _ConfirmDialogState extends State<ConfirmDialog> {
         FlatButton(
           onPressed: widget.function,
           color: Color.fromRGBO(230, 73, 90, 1),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+            side: BorderSide(width: 1.0),
+          ),
           child: Text(
             "Sí",
             style: TextStyle(
