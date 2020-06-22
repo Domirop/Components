@@ -27,7 +27,7 @@ class TextFieldPredefine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-        enabled: enable,
+        enableSuggestions: enable,
         enableInteractiveSelection: false,
         toolbarOptions: toolbarOptions,
         controller: controller,
