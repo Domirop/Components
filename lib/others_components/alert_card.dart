@@ -15,6 +15,9 @@ class AlertCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+      ),
       height: this.height,
       width: this.width,
       color: this.color,
