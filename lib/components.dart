@@ -78,8 +78,8 @@ class Components {
   }
 
   static Widget confirmDialog(
-      Widget widget, Function function, String textSimple,
-      {bool multiOptions = true, Function functionSimple}) {
+      Widget widget, Function function,
+      {bool multiOptions = true, Function functionSimple, String textSimple = "Aceptar"}) {
     functionSimple == null ? () => {} : functionSimple = functionSimple;
     return ConfirmDialog(
         widget, function, multiOptions, functionSimple, textSimple);
