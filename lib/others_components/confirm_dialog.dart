@@ -6,9 +6,11 @@ class ConfirmDialog extends StatefulWidget {
   Widget widget;
   Function function;
   bool multiOptions;
+  Function functionSimple;
   BuildContext context;
+  String textSimple;
 
-  ConfirmDialog(this.widget, this.function, this.multiOptions);
+  ConfirmDialog(this.widget, this.function, this.multiOptions, this.functionSimple, this.textSimple);
 
   @override
   _ConfirmDialogState createState() => _ConfirmDialogState();
@@ -75,8 +77,9 @@ class _ConfirmDialogState extends State<ConfirmDialog> {
 
   Widget buttonSimple() {
     return Components.smallButton(
-      () => {Navigator.pop(context)},
-      Components.smallText("Aceptar"),
+      () => {this.widget.functionSimple,
+      Navigator.pop(context)},
+      Components.smallText(this.widget.textSimple),
       color: Color.fromRGBO(230, 73, 90, 1),
       height: height * 0.05,
     );

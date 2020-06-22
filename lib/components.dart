@@ -13,7 +13,6 @@ import 'package:components/text_types/textfield_predefine.dart';
 import 'package:flutter/material.dart';
 
 class Components {
-
   static MyButton smallButton(Function function, Widget widget,
       {double height,
       double horizontalPadding = 35.0,
@@ -78,8 +77,11 @@ class Components {
     return GoBack(screen, text);
   }
 
-  static Widget confirmDialog(Widget widget, Function function,
-      {bool multiOptions = true}) {
-    return ConfirmDialog(widget, function, multiOptions);
+  static Widget confirmDialog(
+      Widget widget, Function function, String textSimple,
+      {bool multiOptions = true, Function functionSimple}) {
+    functionSimple == null ? () => {} : functionSimple = functionSimple;
+    return ConfirmDialog(
+        widget, function, multiOptions, functionSimple, textSimple);
   }
 }
