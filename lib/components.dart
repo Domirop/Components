@@ -3,6 +3,7 @@ library components;
 import 'package:components/buttons/button.dart';
 import 'package:components/errors_elements/network_error.dart';
 import 'package:components/errors_elements/text_error.dart';
+import 'package:components/others_components/alert_card.dart';
 import 'package:components/others_components/calendar.dart';
 import 'package:components/others_components/confirm_dialog.dart';
 import 'package:components/others_components/go_back.dart';
@@ -77,11 +78,21 @@ class Components {
     return GoBack(screen, text);
   }
 
-  static Widget confirmDialog(
-      Widget widget, Function function,
-      {bool multiOptions = true, Function functionSimple, String textSimple = "Aceptar"}) {
+  static Widget confirmDialog(Widget widget, Function function,
+      {bool multiOptions = true,
+      Function functionSimple,
+      String textSimple = "Aceptar"}) {
     functionSimple == null ? () => {} : functionSimple = functionSimple;
     return ConfirmDialog(
         widget, function, multiOptions, functionSimple, textSimple);
+  }
+
+  static AlertCard alertCard(
+      Widget firstWidget, Widget secondWidget, double height, double width,
+      {Color color = Colors.white,
+      MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
+      CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center}) {
+    return AlertCard(color, height, width, firstWidget, secondWidget,
+        mainAxisAlignment, crossAxisAlignment);
   }
 }
