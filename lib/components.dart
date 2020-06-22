@@ -59,10 +59,9 @@ class Components {
       int maxLength,
       Function onchangeFunction,
       bool obscureText = false,
-      ToolbarOptions toolbarOptions,
-      bool enable = true}) {
+      ToolbarOptions toolbarOptions}) {
     return TextFieldPredefine(controller, textType, decoration, textStyle,
-        cursorColor, maxLength, onchangeFunction, obscureText, toolbarOptions, enable);
+        cursorColor, maxLength, onchangeFunction, obscureText, toolbarOptions);
   }
 
   static NetworkError networkError(double height, double width) {

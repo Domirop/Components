@@ -10,7 +10,6 @@ class TextFieldPredefine extends StatelessWidget {
   Function onchangeFunction;
   bool obscureText;
   ToolbarOptions toolbarOptions;
-  bool enable;
 
   TextFieldPredefine(
       this.controller,
@@ -21,13 +20,11 @@ class TextFieldPredefine extends StatelessWidget {
       this.maxLength,
       this.onchangeFunction,
       this.obscureText,
-      this.toolbarOptions,
-      this.enable);
+      this.toolbarOptions);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-        enableSuggestions: enable,
         enableInteractiveSelection: false,
         toolbarOptions: toolbarOptions,
         controller: controller,
