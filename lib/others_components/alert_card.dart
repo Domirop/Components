@@ -16,11 +16,11 @@ class AlertCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
+        color: color,
+        borderRadius: BorderRadius.circular(10),
       ),
       height: this.height,
       width: this.width,
-      color: this.color,
       child: Row(
         mainAxisAlignment: this.mainAxisAlignment,
         crossAxisAlignment: this.crossAxisAlignment,
