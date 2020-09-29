@@ -64,14 +64,14 @@ class Components {
         cursorColor, maxLength, onchangeFunction, obscureText, toolbarOptions);
   }
 
-  static NetworkError networkError(double height, double width) {
+  static NetworkError networkError(double height, double width, Widget widget) {
     LargeText largeText =
         Components.largeText("¡Vaya! Parece que no tienes internet");
     MediumText mediumText1 =
         Components.mediumText("No podemos obtener los datos");
     MediumText mediumText2 =
         Components.mediumText("Por favor revisa tu conexión a internet");
-    return NetworkError(height, width, largeText, mediumText1, mediumText2);
+    return NetworkError(height, width, largeText, mediumText1, mediumText2, widget);
   }
 
   static GoBack goBack(BuildContext screen, String text) {
